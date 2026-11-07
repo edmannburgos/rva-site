@@ -196,3 +196,38 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
  .footer-brand span{font-size:8px}
  .nav .nav-home{margin-top:12px;padding:13px 14px;min-height:46px;border:0}
 }
+.floating-home {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background-color: var(--gold);
+  color: var(--maroon);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(48, 11, 22, 0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.floating-home:hover {
+  transform: translateY(-4px);
+  background-color: #ffdc65;
+}
+
+/* Shrinks the button slightly on mobile devices to save screen space */
+@media (max-width: 680px) {
+  .floating-home {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .floating-home svg {
+    width: 20px;
+    height: 20px;
+  }
+}
