@@ -231,3 +231,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     height: 20px;
   }
 }
+/* Fix for mobile topline overlapping */
+@media (max-width: 680px) {
+  .topline {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 6px !important;
+    padding: 12px 14px !important;
+    height: auto !important;
+  }
+}
